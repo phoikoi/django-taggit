@@ -29,6 +29,7 @@ else:
 
 
 class TaggableRel(ManyToManyRel):
+    related_query_name = None
     def __init__(self, field, related_name, through, to=None):
         # rel.to renamed to rel.model in Django 1.9
         if VERSION >= (1, 9):
